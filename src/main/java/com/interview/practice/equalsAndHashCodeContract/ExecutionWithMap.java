@@ -39,9 +39,9 @@ public class ExecutionWithMap {
         System.out.println("SIZE "+studentMap.size());
 
         // due to comment hashcode jvm create a new memory adress to to find in the
-        // hashmap bucket and it never find it becuase its a new memberoy adress crateed
+        // hashmap bucket and it never find it becuase its a new memory adress created
         //that a reason it return null
-        System.out.println(map.get(new Student(11, "manish")));
+        System.out.println(studentMap.get(new Student(11, "manish")));
 
     }
 }

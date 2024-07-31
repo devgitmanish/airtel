@@ -19,7 +19,7 @@ public class Interview {
         map.put(m3, 7000);
         map.put(m4, 9000);
 
-        //Here its return false because because equals always return false.
+        //Here its return false because equals always return false.
         System.out.println(m1.equals(m4));
 
         System.out.println(map.size());
