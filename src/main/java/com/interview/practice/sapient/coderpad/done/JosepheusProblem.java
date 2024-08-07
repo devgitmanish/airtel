@@ -1,12 +1,11 @@
-package com.interview.practice.sapient;
+package com.interview.practice.sapient.coderpad.done;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class JosepheusProblem {
 
-    static void Josh(List<Integer> person, int k, int index)
-    {
+    static void Josh(List<Integer> person, int k, int index) {
 
         // Base case , when only one person is left
         if (person.size() == 1) {
@@ -25,14 +24,12 @@ public class JosepheusProblem {
     }
 
     // Driver code
-    public static void main(String [] args)
-    {
+    public static void main(String [] args) {
         int n = 14; // specific n and k values for original
         // josephus problem
         int k = 2;
         k--; // (k-1)th person will be killed
-        int index
-                = 0; // The index where the person which will die
+        int index = 0; // The index where the person which will die
 
         List<Integer> person = new ArrayList<>();
 

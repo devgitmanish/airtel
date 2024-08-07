@@ -19,6 +19,18 @@ public class FindHighestSalary {
                 .forEach(System.out::println);
     }
 
+    public static void findSalaryGreaterThanY(Map<String, Employee> map){
+
+        Map<String, Employee> collect = map.entrySet()
+                .stream()
+                .filter(x -> x.getValue().getSalary() > 700000)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        collect.forEach((key, value) -> {
+            System.out.println("Name "+ value.getName() + " salary "+ value.getSalary());
+        });
+    }
+
 
     public static void main(String[] args) {
         Map<String, Employee> map = new HashMap<>();
@@ -28,5 +40,6 @@ public class FindHighestSalary {
         map.put("four", new Employee(113, "laxman", 37, 900000));
         map.put("five", new Employee(114, "alex", 43, 300000));
         findSalaryGreaterThanX(map);
+        findSalaryGreaterThanY(map);
     }
 }

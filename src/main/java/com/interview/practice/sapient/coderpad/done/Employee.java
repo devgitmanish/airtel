@@ -1,4 +1,4 @@
-package com.interview.practice.sapient;
+package com.interview.practice.sapient.coderpad.done;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.interview.practice.sapient;
+package com.interview.practice.sapient.coderpad.done;
 
 import java.util.*;
 import java.util.stream.Collectors;
