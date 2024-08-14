@@ -12,7 +12,7 @@ public class MyntraNthHighestSalary {
 
     public static void secondHighestSalary(Map<Integer, Employee> employeeMap, int num) {
 
-        Map<Double, List<String>> collect = employeeMap.values()
+        Map<Integer, List<String>> collect = employeeMap.values()
                 .stream()
                 .collect(Collectors.groupingBy(Employee::getSalary,
                         Collectors.mapping(Employee::getName,
@@ -84,7 +84,7 @@ class Employee {
 
     private int id;
     private String name;
-    private double salary;
+    private int salary;
 
 }
 

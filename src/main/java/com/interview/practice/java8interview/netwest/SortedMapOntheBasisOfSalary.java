@@ -25,6 +25,8 @@ public class SortedMapOntheBasisOfSalary {
 
     }
 
+
+
     public static void main(String[] args) {
 
         Map<String, Employee> map = new HashMap<>();
@@ -33,7 +35,24 @@ public class SortedMapOntheBasisOfSalary {
         map.put("three", new Employee(789, "hanu", 26, 800000));
         map.put("four", new Employee(113, "laxman", 37, 900000));
         map.put("five", new Employee(114, "alex", 43, 300000));
-        sortedMapOnTheBasisOfSalary(map);
+        //sortedMapOnTheBasisOfSalary(map);
+        System.out.println("Before sorted ....");
+        map.forEach((key, value) -> {
+            System.out.println("key "+key + " value "+ value);
+        });
+
+
+        System.out.println("After sorted ....");
+
+        LinkedHashMap<String, Employee> collect = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.comparing(Employee::getSalary)))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (x, y) -> x, LinkedHashMap::new));
+        collect.forEach((key, value) -> {
+            System.out.println("key "+ key + " Values "+ value);
+        });
+
     }
 
 }

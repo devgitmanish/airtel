@@ -23,6 +23,7 @@ public class EmployeeSalarySum {
                 .forEach( (key, value) -> {
                     System.out.println("Name "+key + " Salary Sum "+ value);
                 });
+
     }
 }
 

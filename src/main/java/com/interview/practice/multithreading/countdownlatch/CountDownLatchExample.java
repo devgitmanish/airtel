@@ -1,4 +1,4 @@
-package com.interview.practice.multithreading.latch;
+package com.interview.practice.multithreading.countdownlatch;
 
 import org.springframework.aop.ThrowsAdvice;
 

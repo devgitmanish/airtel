@@ -27,7 +27,6 @@ public class SimpleExecutorExample {
         for (int i = 0; i < 3; i++)
             executorService.execute(runnable1);
 
-
         executorService.shutdown();
     }
 }
