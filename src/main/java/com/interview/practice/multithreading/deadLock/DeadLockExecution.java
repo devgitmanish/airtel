@@ -51,8 +51,6 @@ class MyThread2 implements Runnable{
         }
     }
 }
-
-
 public class DeadLockExecution {
 
     public static void main(String[] args) {

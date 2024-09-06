@@ -42,11 +42,28 @@ public class MergeTwoSortedArray {
         System.out.println("Merged Sorted Array "+ Arrays.toString(nums1));
     }
 
+    public static void mergeTwoArrayWay2(int[] a, int[] b, int n, int m) {
+        int[] res = new int[ a.length + b.length];
+        int i=0, j=0, k=0;
+        while (i < n){
+            res[k] = a[i];
+            i++;
+            k++;
+        }
+        while (j < m) {
+            res[k] = b[j];
+            j++;
+            k++;
+        }
+        System.out.println(Arrays.toString(res));
+    }
+
     public static void main(String[] args) {
 
         int [] nums1 = {1, 2, 3, 0, 0, 0};
         int [] nums2 = {2, 5, 6};
         mergeTwoArray(nums1, 3, nums2, 3);
+        mergeTwoArrayWay2(nums1, nums2, nums1.length, nums2.length);
     }
 }
 

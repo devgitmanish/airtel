@@ -30,7 +30,7 @@ public class TwoSumTarget {
 
     public static void main(String[] args) {
 
-        int [] nums = {1, 4, 6, 8}; /* Target = 12 index value of two integer*/
+        int [] nums = {1, 4, 6, 8}; /* Target = 14 index value of two integer*/
         int target = 14;
         System.out.println("Before "+ Arrays.toString(nums));
         twoSum(nums, target);

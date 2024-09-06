@@ -17,10 +17,9 @@ public class ValidPalandrome {
         return true;
     }
 
-
     public static void main(String[] args) {
 
-        String str = "racecar";
+        String str = "racecare";
         boolean result=checkValidPalandrome(str);
         if(result)
             System.out.println("valid palandrome string");

@@ -19,10 +19,10 @@ public class ValidAnagram {
         }
         return true;
     }
-    public static void main(String[] args) {
-        String s = "anagramm";
-        String t = "agramnan";
 
+    public static void main(String[] args) {
+        String s = "anagramd";
+        String t = "anamrag";
         System.out.println(isValidAnagram(s,t));
     }
 }

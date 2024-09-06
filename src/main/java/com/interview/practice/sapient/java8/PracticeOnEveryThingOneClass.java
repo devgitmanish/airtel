@@ -67,7 +67,19 @@ public class PracticeOnEveryThingOneClass {
         nthHighestSalaryComplex.put("laxman", 200000);
         nthHighestSalaryComplex.put("hanu", 200000);
 
-        /* nthHighestSalaryComplex logic Here on nthHighestSalaryComplex*/
+        /* nthHighestSalaryComplex logic Here on nthHighestSalaryComplex
+         * print the person's name who is having second highest salary */
+        System.out.println("Print the person's name who is having second highest salary");
+        Map.Entry<Integer, List<String>> integerListEntry1 = nthHighestSalaryComplex.entrySet()
+                .stream()
+                .collect(Collectors.groupingBy(Map.Entry::getValue,
+                        Collectors.mapping(Map.Entry::getKey, Collectors.toList())))
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Comparator.comparing(Map.Entry::getKey)))
+                .toList()
+                .get(1);
+        System.out.println("2nd Highest Salary "+integerListEntry1.getKey() + " Employee "+integerListEntry1.getValue());
 
 
         Map<Integer, Employee> employeeMap = new HashMap<>();
@@ -79,7 +91,27 @@ public class PracticeOnEveryThingOneClass {
 
         /* nthHighestSalaryComplex logic Here on employeeMap */
 
+        Map.Entry<Integer, List<String>> integerListEntry2 = employeeMap.values()
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getSalary,
+                        Collectors.mapping(Employee::getName, Collectors.toList())))
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Comparator.comparing(Map.Entry::getKey)))
+                .toList()
+                .get(1);
+        System.out.println("IInd Highest Employee Name "+ integerListEntry2.getValue() + " Salary "+ integerListEntry2.getKey());
 
+
+        /* Find Employee's who's have salary more than 3000*/
+        System.out.println("Find Employee's who's have salary more than 3000");
+        Map<Integer, Employee> collect3 = employeeMap.entrySet()
+                .stream()
+                .filter(x -> x.getValue().getSalary() > 3000)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        collect3.forEach((key, value) -> System.out.println(" Employee Id "+key + " Employee Name "+value.getName()
+                + "Employee Salary "+ value.getSalary()));
 
 
         List<Employee> list = new ArrayList<>();
@@ -96,8 +128,8 @@ public class PracticeOnEveryThingOneClass {
         System.out.println(collect1);
 
         /* Salary count
-        * 2000- -> 2
-        * 5000 -> 1 */
+         * 2000- -> 2
+         * 5000 -> 1 */
 
         Map<Integer, Long> collect2 = list.stream()
                 .collect(Collectors.groupingBy(Employee::getSalary,
