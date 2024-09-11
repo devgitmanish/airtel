@@ -1,4 +1,4 @@
-package com.interview.practice.fibonacciseries;
+package com.interview.practice.sapient.coderpad.done.fibonacciseries;
 
 public class NormalFibonacci {
 

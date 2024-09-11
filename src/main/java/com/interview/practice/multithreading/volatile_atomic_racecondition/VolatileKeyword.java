@@ -1,4 +1,4 @@
-package com.interview.practice.multithreading.volatile_atomic;
+package com.interview.practice.multithreading.volatile_atomic_racecondition;
 
 public class VolatileKeyword implements Runnable {
 
