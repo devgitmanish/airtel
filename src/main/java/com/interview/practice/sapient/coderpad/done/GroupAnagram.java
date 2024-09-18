@@ -32,7 +32,7 @@ public class GroupAnagram {
 
     public static void main(String[] args) {
         String [] arr = {"aab", "baa"};
-        groupAnagram(arr);
+        System.out.println(groupAnagram(arr));
     }
 
 }
